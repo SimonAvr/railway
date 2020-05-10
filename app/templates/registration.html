@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center container">
+    <form class="text-center border border-light p-5" action="/registration" method = "POST">
+
+        <p class="h4 mb-4">Sign up</p>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <!-- First name -->
+                <input type="text" name= "RegisterFormFirstName" id="RegisterFormFirstName" class="form-control" placeholder="First name" pattern=".{3,}" required title="3 characters minimum">
+               
+            </div>
+            <div class="col">
+                <!-- Last name -->
+                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" pattern=".{3,}" required title="3 characters minimum">
+            </div>
+        </div>
+
+        <!-- E-mail -->
+        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" required>
+
+        <!-- Password -->
+        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password"
+            aria-describedby="defaultRegisterFormPasswordHelpBlock" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+            At least 8 characters and 1 digit
+        </small>
+
+
+        <!-- Choose sex -->
+        <div class="form-group">
+            <select class="form-control" id="exampleFormControlSelect1" required>
+              <option value="" selected disabled>Choose your gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+        </div>
+
+        <!-- Age -->
+        <input type="number" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Age" pattern=".{,4}" required title="Too old for us"  >
+        
+
+        <!-- Phone number -->
+        <input type="number" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number"
+                    aria-describedby="defaultRegisterFormPhoneHelpBlock" pattern=".{9,}" title="Must contain at least 9 numbers"  required>
+
+        <!-- Sign up button -->
+        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+
+     
+    </form>
+</div>
+
+{% endblock %}
