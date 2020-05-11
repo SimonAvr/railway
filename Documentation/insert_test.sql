@@ -1,2 +1,1 @@
-INSERT INTO [test].[dbo].[Table] ([id], [Name], [Password])
-VALUES (101, 'JavaName', 'JavaPass');
+INSERT INTO [railway].[dbo].[user] ([mail],[password],[first_name], [last_name], [gender],[age]) VALUES ('+ str(user.mail) +','okopwkep','fer','erf',1,1);

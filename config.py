@@ -6,6 +6,8 @@ class Config(object):
 
     conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=LPOL250044;'
-                      'Database=test;'
+                      'Database=railway;'
                       'Trusted_Connection=yes;')
     cursor = conn.cursor() 
+    SQLALCHEMY_DATABASE_URL = cursor
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
